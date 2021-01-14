@@ -17,7 +17,7 @@ public class Ball : MonoBehaviour
     public bool hasBeenLaunched = false;
 
 	// Use this for initialization
-	void Start ()
+void Start ()
     {
         //find paddle
         paddle = GameObject.FindObjectOfType<Paddle>();
