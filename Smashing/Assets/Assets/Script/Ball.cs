@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     //Reference to the rigidbody of the object
-    private Rigidbody2D rb;     
+    private Rigidbody2D Rb;     
       
     //A variable of type Paddle. In the start function, this variable will have the paddle gameObject passed into it
     private Paddle paddle;
@@ -50,9 +50,9 @@ public class Ball : MonoBehaviour
         {
             //There is a bug in Unity where the collider will fall and touch the Lose Collider even though it seems to stay on the paddle
             //To fix this, disable the rigidbody2d physics simulation when the ball sits on the paddle and re-activate it when it launches
-            this.rb = this.gameObject.GetComponent<Rigidbody2D>();
+            this.Rb = this.gameObject.GetComponent<Rigidbody2D>();
 
-            this.rb.gravityScale = 0;
+            this.Rb.gravityScale = 0;
 
             //Launch ball
             ballOnPaddle();
@@ -63,7 +63,7 @@ public class Ball : MonoBehaviour
         #region hasBeenLaunched is true
         if (hasBeenLaunched == true)
         {            
-            this.rb.gravityScale = 1;
+            this.Rb.gravityScale = 1;
         }
         #endregion hasBeenLaunched is true        
     }
