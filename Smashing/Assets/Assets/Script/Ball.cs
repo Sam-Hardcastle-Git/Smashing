@@ -27,7 +27,7 @@ public class Ball : MonoBehaviour
     }
 	
 	// Update is called once per frame
-	void Update ()
+    void Update ()
     {
         //when clicking, if the begin/try again message is done and if the ball has launched, change hasBeenLaunched to true
         #region hasBeenLaunched turns true
