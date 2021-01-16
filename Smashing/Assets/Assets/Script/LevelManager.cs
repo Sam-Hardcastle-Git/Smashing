@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
     public void LoadLevel(string name)
     {
         //reset Lives
-        LifeCount.lives = 3;        
+        LifeCount.Lives = 3;        
         SceneManager.LoadScene(name);
     }
 

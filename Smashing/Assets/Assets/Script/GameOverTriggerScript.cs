@@ -20,7 +20,7 @@ public class GameOverTriggerScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         //life subtract
-        LifeCount.lives = LifeCount.lives - 1;
+        LifeCount.Lives = LifeCount.Lives - 1;
 
         //set up for the tryAgain function to execute
         ReadyGoCongrats.TimeUntilStart = 1;
@@ -33,7 +33,7 @@ public class GameOverTriggerScript : MonoBehaviour
         ball.hasBeenLaunched = false;
 
         //no lives? Game over
-        if(LifeCount.lives <= 0)
+        if(LifeCount.Lives <= 0)
         {
             levelManager.GameOver();
         }        
