@@ -9,7 +9,7 @@ public class LifeCount : MonoBehaviour
     public Text countText;
 	
 	// Update is called once per frame
-	void Update ()
+    void Update ()
     {
         countText.text = "Lives: " + lives;
     }

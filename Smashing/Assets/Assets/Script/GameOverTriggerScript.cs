@@ -23,8 +23,8 @@ public class GameOverTriggerScript : MonoBehaviour
         LifeCount.lives = LifeCount.lives - 1;
 
         //set up for the tryAgain function to execute
-        ReadyGoCongrats.timeUntilStart = 1;
-        ReadyGoCongrats.canStart = false;
+        ReadyGoCongrats.TimeUntilStart = 1;
+        ReadyGoCongrats.CanStart = false;
 
         //it's time to call the Try Again function
         readyGoCongrats.timeToCallTryAgain = true;

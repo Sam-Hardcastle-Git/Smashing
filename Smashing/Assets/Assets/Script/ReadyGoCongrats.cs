@@ -5,8 +5,8 @@ using UnityEngine;
 public class ReadyGoCongrats : MonoBehaviour
 {
     //Statics
-    public static bool canStart = false;
-    public static float timeUntilStart = 1;
+    public static bool CanStart = false;
+    public static float TimeUntilStart = 1;
 
     //bool
     public bool timeToCallTryAgain = false;  
@@ -22,19 +22,19 @@ public class ReadyGoCongrats : MonoBehaviour
 	}
 
 	// Update is called once per frame
-	void Update ()
+    void Update ()
     {
         //countdown
-        timeUntilStart = (timeUntilStart - (1 * Time.deltaTime));
+        TimeUntilStart = (TimeUntilStart - (1 * Time.deltaTime));
 
         //when counter hits zero
-        if (timeUntilStart <= 0)
+        if (TimeUntilStart <= 0)
         {
             //player can launch ball
-            canStart = true;
+            CanStart = true;
 
             //reset timer
-            timeUntilStart = 0;
+            TimeUntilStart = 0;
 
             //destroy message when time is up
             Destroy(GameObject.Find("Begin!(Clone)"));

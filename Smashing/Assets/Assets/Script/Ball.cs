@@ -33,7 +33,7 @@ public class Ball : MonoBehaviour
         #region hasBeenLaunched turns true
         if (Input.GetMouseButtonDown(0))
         {
-            if(ReadyGoCongrats.canStart)
+            if(ReadyGoCongrats.CanStart)
             {
                 if (hasBeenLaunched == false)
                 {

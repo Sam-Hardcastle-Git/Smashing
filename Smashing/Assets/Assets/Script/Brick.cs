@@ -20,7 +20,7 @@ public class Brick : MonoBehaviour
     private LevelManager levelManager;
 
     //static int
-    public static int noOfBricksLeft;
+    public static int NoOfBricksLeft;
 
     //bool
     private bool isBreakable;
@@ -42,7 +42,7 @@ public class Brick : MonoBehaviour
         //if isBreakable is true, add one to noOfBricksBroken
         if (isBreakable)
         {
-            noOfBricksLeft++;
+            NoOfBricksLeft++;
         }
 
         //find the levelManager game object
@@ -53,7 +53,7 @@ public class Brick : MonoBehaviour
     }
 	   
 	//Either destroy block or execute handleHits()
-	void Update ()
+    void Update ()
     {       
 
         if (isBreakable)
@@ -122,7 +122,10 @@ public class Brick : MonoBehaviour
             this.GetComponent<SpriteRenderer>().sprite = hitSprites[timesHit];
         }
         else
-            Debug.LogError("missing sprite");        
+        {
+            Debug.LogError("missing sprite");
+        }
+                   
     }
 
     void handleHits()
@@ -130,7 +133,7 @@ public class Brick : MonoBehaviour
         if (timesHit >= maxHits)
         {
             //add to the breakableBlockCount
-            noOfBricksLeft = noOfBricksLeft - 1;          
+            NoOfBricksLeft = NoOfBricksLeft - 1;          
 
             //destroy this block
             DestroyObject(gameObject);
